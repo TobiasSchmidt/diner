@@ -2,9 +2,11 @@ extends CharacterBody3D
 
 var speed := 5.0
 var mouse_sensitivity := 0.2
+var can_move := true
 
 @onready var camera = $Camera3D
-@onready var ray = $InteractRay
+@onready var ray = $Camera3D/InteractRay
+@onready var hand = $Camera3D/Hand
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -16,8 +18,9 @@ func _input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _physics_process(delta):
+	if not can_move:
+		return
 	var direction = Vector3.ZERO
-
 	if Input.is_action_pressed("ui_up"):
 		direction -= transform.basis.z
 	if Input.is_action_pressed("ui_down"):
@@ -45,9 +48,12 @@ func _physics_process(delta):
 	
 func try_interact():
 	if ray.is_colliding():
+		print(ray.get_collider())
 		var hit = ray.get_collider()
-		print('get collider')
-	
 		if hit and hit.has_method("interact"):
-			print('get hit')
 			hit.interact()
+			
+func hold_item(item):
+	item.reparent(hand)
+	item.transform = Transform3D.IDENTITY
+	
