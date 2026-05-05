@@ -1,8 +1,8 @@
 extends Node3D
 
-@onready var player = get_node("../Player")
+@onready var player = get_tree().get_first_node_in_group("player")
 @onready var camera = player.get_node("Camera3D")
-@onready var table = get_node("..diner/diner-wrapper/Seat_02")
+@onready var table_target = $Area3D
 @onready var seat_anchor = $SeatAnchor
 
 @export var character_scene: PackedScene
@@ -16,8 +16,8 @@ func _ready() -> void:
 func _on_spawn_timer_timeout():
 	if has_spawned:
 		return
-	if not is_camera_looking_at(table):
-		# TODO		spawn_character()
+	if not is_camera_looking_at(table_target):
+		spawn_character()
 		has_spawned = true
 	else:
 		await get_tree().create_timer(3).timeout
@@ -27,14 +27,15 @@ func is_camera_looking_at(target: Node3D) -> bool:
 	var camera_pos = camera.global_transform.origin
 	var camera_forward = -camera.global_transform.basis.z.normalized()
 	
-	var to_target = (target.global_transform.origin -camera_pos).normalized()
+	var to_target = (target.global_transform.origin - camera_pos).normalized()
 	
 	var dot = camera_forward.dot(to_target)
 	
 	return dot > 0.6
 
 func spawn_character():
-	var character = character_scene.instantiaite()
+	print("Spawning character")
+	var character = character_scene.instantiate()
 	
 	character.global_transform = seat_anchor.global_transform
 	
