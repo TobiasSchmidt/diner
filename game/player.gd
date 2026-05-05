@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var speed := 5.0
+var speed := 3.0
 var mouse_sensitivity := 0.2
 var can_move := true
 
@@ -56,4 +56,5 @@ func try_interact():
 func hold_item(item):
 	item.reparent(hand)
 	item.transform = Transform3D.IDENTITY
+	#item.scale = Vector3(1.5, 1.5, 1.5)
 	

@@ -44,7 +44,6 @@ func finish_coffee(audio):
 	mug_instance.fill_coffee()
 	audio.stop()
 	player.can_move = true
-	# TODO give mug to player	
 	hand_to_player()
 
 func hand_to_player():
