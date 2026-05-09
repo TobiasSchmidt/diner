@@ -1,1 +1,4 @@
-.godot/
+.godot
+*.import
+/*.png
+/*.jpg
