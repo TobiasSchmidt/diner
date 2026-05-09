@@ -4,9 +4,13 @@ var speed := 3.0
 var mouse_sensitivity := 0.2
 var can_move := true
 
+var in_dialogue := false
+var current_npc = null
+
 @onready var camera = $Camera3D
 @onready var ray = $Camera3D/InteractRay
 @onready var hand = $Camera3D/Hand
+@onready var camera_controller = $CameraController
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -57,4 +61,27 @@ func hold_item(item):
 	item.reparent(hand)
 	item.transform = Transform3D.IDENTITY
 	#item.scale = Vector3(1.5, 1.5, 1.5)
+	
+func start_dialogue(npc):
+	if in_dialogue:
+		return
+
+	in_dialogue = true
+	current_npc = npc
+
+	# lock movement/input here if needed
+	set_process_input(false)
+
+	camera_controller.enter_dialogue(npc)
+
+	# later: UI/dialog system trigger
+	print("Dialogue started with:", npc.name)	
+	
+func end_dialogue():
+	in_dialogue = false
+	current_npc = null
+
+	set_process_input(true)
+
+	camera_controller.exit_dialogue()	
 	

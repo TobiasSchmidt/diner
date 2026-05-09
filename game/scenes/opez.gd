@@ -2,6 +2,8 @@ extends Node3D
 
 @onready var anim = $Visual/AnimationPlayer
 @onready var skeleton: Skeleton3D = $Visual/Armature/Skeleton3D
+@onready var head_target: Node3D = $HeadTarget
+@onready var dialog_light: OmniLight3D = $DialogLight
 
 var player = null
 var is_talking := false
@@ -9,6 +11,7 @@ var is_talking := false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sit()
+	dialog_light.light_energy = 0.0
 
 func sit():
 	anim.play("Sit")
@@ -18,11 +21,25 @@ func interact():
 		return
 
 	print("Start Dialog...")
-	player = get_tree().get_first_node_in_group("playewawwwwwwwwwwwwwwwwwwwwwwwwwwwwwwdddswdssw  wr")
+	player = get_tree().get_first_node_in_group("player")
 
 	turn_head()
 	is_talking = true
 	# TODO start dialog
+	
+	enable_dialog_light()
+	player.start_dialogue(self)
+	
+	
+func enable_dialog_light():
+	var tween = get_tree().create_tween()
+
+	tween.tween_property(
+		dialog_light,
+		"light_energy",
+		0.1,   # target brightness
+		0.05
+	)	
 
 func look_at_player():
 	var dir = (player.global_position - global_position).normalized()

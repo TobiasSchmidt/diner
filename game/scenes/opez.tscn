@@ -15,6 +15,9 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_drie2")
 
+[node name="HeadTarget" type="Node3D" parent="Opez" unique_id=1309462639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2549888, 0.5600963, 2.2382398)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Opez" unique_id=1005961829]
 transform = Transform3D(-3.0597969e-10, 0.007000001, -1.0558252e-09, 2.1741166e-24, -3.0597963e-10, -0.024154468, -0.0069999984, -3.0597963e-10, 4.6151603e-17, -0.036138296, 0.4806676, 2.1498966)
 shape = SubResource("CapsuleShape3D_drie2")
@@ -67,5 +70,11 @@ bones/28/rotation = Quaternion(-0.009688831, 0.018689385, 0.74011457, -0.6721512
 bones/29/rotation = Quaternion(-0.039357353, -0.019793835, -0.69641507, 0.7162858)
 bones/30/rotation = Quaternion(0.39857262, -0.57464784, 0.37725142, 0.6071253)
 bones/31/position = Vector3(-1.1194555e-06, 39.210327, 1.0183142e-05)
+
+[node name="DialogLight" type="OmniLight3D" parent="Opez" unique_id=2039096695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25706702, 0.55461544, 2.29807)
+light_color = Color(0.88550615, 0.78659695, 0.73772985, 1)
+light_energy = 0.2
+omni_range = 1.0
 
 [editable path="Opez/Visual"]
