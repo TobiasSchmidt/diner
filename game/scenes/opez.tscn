@@ -21,10 +21,10 @@ shape = SubResource("CapsuleShape3D_drie2")
 
 [node name="Visual" parent="Opez" unique_id=185694675 instance=ExtResource("1_vdfwd")]
 
-[node name="Armature" parent="Opez/Visual" index="0" unique_id=482495704]
+[node name="Armature" parent="Opez/Visual" index="0" unique_id=531397288]
 transform = Transform3D(-3.059797e-10, 0.007, -3.059797e-10, 0, -3.059797e-10, -0.007, -0.007, -3.059797e-10, 1.3374798e-17, -0.2737062, -2.168612, 2.359292)
 
-[node name="Skeleton3D" parent="Opez/Visual/Armature" index="0" unique_id=1702222162]
+[node name="Skeleton3D" parent="Opez/Visual/Armature" index="0" unique_id=574331809]
 bones/0/position = Vector3(-4.3994393, -0.0066490173, -250.37709)
 bones/0/rotation = Quaternion(-0.7071068, 0, 0, 0.7071068)
 bones/1/rotation = Quaternion(1.2286941e-19, -1.964843e-18, 0.062412538, 0.99805045)
