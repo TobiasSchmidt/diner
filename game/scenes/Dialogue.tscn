@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bdq2vd54cj2im"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6o6rt"]
+bg_color = Color(0, 0, 0, 0.79607844)
+
+[node name="Dialogue" type="Node2D" unique_id=1240128908]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1859917074]
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer" unique_id=229932494]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6o6rt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/DialogueBox" unique_id=2106468961]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
