@@ -4,9 +4,13 @@ extends Node3D
 @onready var skeleton: Skeleton3D = $Visual/Armature/Skeleton3D
 @onready var head_target: Node3D = $HeadTarget
 @onready var dialog_light: OmniLight3D = $DialogLight
+@export var dialogue_file := "res://assets/dialogue/opez.json"
 
 var player = null
-var is_talking := false
+var is_talking := false#
+var has_talked := false
+var conversation_index := 0
+var talk_count := 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,7 +32,7 @@ func interact():
 	# TODO start dialog
 	
 	enable_dialog_light()
-	player.start_dialogue(self)
+	DialogueManager.start_dialogue(self)
 	
 	
 func enable_dialog_light():
@@ -63,7 +67,24 @@ func turn_head():
 	var new_rotation = current_pose * yaw_rot
 
 	skeleton.set_bone_pose_rotation(bone_idx, new_rotation)
-	
+
+func get_dialogue_lines(data: Dictionary):
+	print(data)
+	var convo = data["conversation_start"]
+
+	if talk_count == 0:
+		return convo["first"]
+
+	elif talk_count == 1:
+		return convo["second"]
+
+	else:
+		return convo["repeat"]
+
+func on_dialogue_finished():
+	talk_count += 1
+	is_talking = false
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

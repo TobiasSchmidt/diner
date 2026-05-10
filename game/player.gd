@@ -16,12 +16,18 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
+	if in_dialogue:
+		return
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
 		camera.rotate_x(deg_to_rad(-event.relative.y * mouse_sensitivity))
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _physics_process(delta):
+	if in_dialogue:
+		if Input.is_action_just_pressed("interact"):
+			DialogueManager.advance_dialogue()
+		return
 	if not can_move:
 		return
 	var direction = Vector3.ZERO
@@ -62,26 +68,14 @@ func hold_item(item):
 	item.transform = Transform3D.IDENTITY
 	#item.scale = Vector3(1.5, 1.5, 1.5)
 	
-func start_dialogue(npc):
-	if in_dialogue:
-		return
 
+# called by DialogueManager
+func lock_player(npc):
 	in_dialogue = true
-	current_npc = npc
-
-	# lock movement/input here if needed
-	set_process_input(false)
-
 	camera_controller.enter_dialogue(npc)
 
-	# later: UI/dialog system trigger
-	print("Dialogue started with:", npc.name)	
-	
-func end_dialogue():
+# called by DialogueManager
+func unlock_player():
 	in_dialogue = false
-	current_npc = null
-
-	set_process_input(true)
-
-	camera_controller.exit_dialogue()	
+	camera_controller.exit_dialogue()
 	

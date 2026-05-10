@@ -1,0 +1,14 @@
+{
+  "conversation_start": {
+	"first":
+   [
+"Hello there.",
+"I haven't seen you here before.",
+"Always refreshing to see a new face.",
+"One cup of coffee please."
+  ]
+, "second":
+["You remind me of my son.", "I haven't talked to him in a while.", "I miss him."],
+"repeat": ["You better get to fetch my coffee. There might be other customers waiting."]
+  }
+}

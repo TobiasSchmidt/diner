@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.6")
 
 buses/default_bus_layout="uid://bxqib50yhjdqp"
 
+[autoload]
+
+DialogueManager="*uid://drky6kndnd2ar"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

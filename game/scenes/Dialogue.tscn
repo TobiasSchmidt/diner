@@ -1,23 +1,55 @@
 [gd_scene format=3 uid="uid://bdq2vd54cj2im"]
 
+[ext_resource type="Script" uid="uid://3ov5tisxicle" path="res://scenes/dialogue.gd" id="1_v3dxv"]
+[ext_resource type="FontFile" uid="uid://cka6p6yl5osk2" path="res://assets/fonts/VT323-Regular.ttf" id="2_myoxq"]
+[ext_resource type="AudioStream" uid="uid://cfqmw602mvj66" path="res://assets/sounds/blipSelect.wav" id="3_y6djt"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6o6rt"]
-bg_color = Color(0, 0, 0, 0.79607844)
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 0.7)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="Dialogue" type="Node2D" unique_id=1240128908]
+script = ExtResource("1_v3dxv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1859917074]
 
 [node name="DialogueBox" type="Panel" parent="CanvasLayer" unique_id=229932494]
+visible = false
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -220.0
+offset_right = -40.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6o6rt")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/DialogueBox" unique_id=2106468961]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_myoxq")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Dialogue goes here..."
+scroll_active = false
+
+[node name="TextBlip" type="AudioStreamPlayer2D" parent="CanvasLayer/DialogueBox" unique_id=536546172]
+stream = ExtResource("3_y6djt")
