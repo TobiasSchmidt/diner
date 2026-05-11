@@ -36,6 +36,12 @@ func type_text(text: String) -> void:
 	dialogue_text.visible_characters = 0
 
 	for i in text.length():
+
+		# stop loop if skipped
+		if !is_typing:
+			dialogue_text.visible_characters = -1
+			return
+
 		dialogue_text.visible_characters += 1
 
 		if text[i] != " ":

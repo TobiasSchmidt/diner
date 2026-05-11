@@ -12,6 +12,14 @@ var has_talked := false
 var conversation_index := 0
 var talk_count := 0
 
+enum State {
+	INTRO,
+	WAITING_FOR_COFFEE,
+	COFFEE_DELIVERED
+}
+
+var state = State.INTRO
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sit()
@@ -84,6 +92,43 @@ func get_dialogue_lines(data: Dictionary):
 func on_dialogue_finished():
 	talk_count += 1
 	is_talking = false
+	reset_head()
+	disable_dialog_light()
+	
+	print("dialog finished")
+	print(state)
+	if state == State.INTRO:
+		print(">>> COFFEE REQUEST EMITTED")
+		state = State.WAITING_FOR_COFFEE
+
+		GlobalSignals.coffee_requested.emit()
+	
+func reset_head():
+	var bone_name = "mixamorig_Head"
+	var bone_idx = skeleton.find_bone(bone_name)
+
+	if bone_idx == -1:
+		return
+
+	var tween = get_tree().create_tween()
+
+	tween.tween_method(
+		func(v):
+			skeleton.set_bone_pose_rotation(bone_idx, v),
+		skeleton.get_bone_pose_rotation(bone_idx),
+		Quaternion.IDENTITY,
+		0.2
+	)
+	
+func disable_dialog_light():
+	var tween = get_tree().create_tween()
+
+	tween.tween_property(
+		dialog_light,
+		"light_energy",
+		0.0,
+		0.15
+	)	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

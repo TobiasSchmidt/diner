@@ -21,6 +21,7 @@ buses/default_bus_layout="uid://bxqib50yhjdqp"
 [autoload]
 
 DialogueManager="*uid://drky6kndnd2ar"
+GlobalSignals="*uid://cwtl82eg2cl5k"
 
 [gui]
 

@@ -14,8 +14,20 @@ var state = State.IDLE
 var player = null
 var mug_instance = null
 
+func _ready():
+	print("CoffeeMachine READY:", is_inside_tree())
+	
+	var err = GlobalSignals.coffee_requested.connect(_on_coffee_requested)
+
+	print("CONNECT RESULT:", err)
+	
+func _on_coffee_requested():
+	print("COFFEE SIGNAL RECEIVED")
+	state = State.READY	
+
 func interact():
-	if state != State.IDLE:
+	print(state)
+	if state != State.READY:
 		return
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
@@ -48,3 +60,6 @@ func finish_coffee(audio):
 
 func hand_to_player():
 	player.hold_item(mug_instance)
+	
+	
+	

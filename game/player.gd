@@ -62,7 +62,8 @@ func try_interact():
 		var hit = ray.get_collider()
 		if hit and hit.has_method("interact"):
 			hit.interact()
-			
+
+
 func hold_item(item):
 	item.reparent(hand)
 	item.transform = Transform3D.IDENTITY
