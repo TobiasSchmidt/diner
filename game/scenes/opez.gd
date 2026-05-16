@@ -37,6 +37,10 @@ func interact() -> void:
 	turn_head()
 	enable_dialog_light()
 
+	if state == State.WAITING_FOR_COFFEE and player.held_item:
+		receive_coffee(player)
+		return
+
 	DialogueManager.start_dialogue(self)
 
 func get_dialogue_key() -> String:
