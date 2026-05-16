@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dn2shu0d2ob40"]
+
+[ext_resource type="Script" uid="uid://cjye8f5fh2knc" path="res://components/dialogue_component.gd" id="1_fivug"]
+
+[node name="DialogueComponent" type="Node3D" unique_id=1265221536]
+script = ExtResource("1_fivug")
+dialogue_file = "res://assets/dialogue/opez.json"

@@ -6,6 +6,7 @@ var can_move := true
 
 var in_dialogue := false
 var current_npc = null
+var held_item = null
 
 @onready var camera = $Camera3D
 @onready var ray = $Camera3D/InteractRay
@@ -65,10 +66,16 @@ func try_interact():
 
 
 func hold_item(item):
+	held_item = item
+	
 	item.reparent(hand)
 	item.transform = Transform3D.IDENTITY
 	#item.scale = Vector3(1.5, 1.5, 1.5)
 	
+func consume_item():
+	if held_item:
+		held_item.queue_free()
+		held_item = null
 
 # called by DialogueManager
 func lock_player(npc):

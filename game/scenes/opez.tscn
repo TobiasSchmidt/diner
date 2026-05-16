@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bhftiwsfwpdrj" path="res://scenes/opez.glb" id="1_vdfwd"]
 [ext_resource type="Script" uid="uid://bhoncdj602gf4" path="res://scenes/opez.gd" id="2_drie2"]
+[ext_resource type="PackedScene" uid="uid://dn2shu0d2ob40" path="res://scenes/DialogueComponent.tscn" id="2_sp4au"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_drie2"]
 radius = 23.545898
@@ -14,6 +15,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36813545, 0, -1.0617638)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_drie2")
+
+[node name="DialogueComponent" parent="Opez" unique_id=1265221536 instance=ExtResource("2_sp4au")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36813545, 0, 1.0617638)
 
 [node name="HeadTarget" type="Node3D" parent="Opez" unique_id=1309462639]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2549888, 0.5600963, 2.2382398)

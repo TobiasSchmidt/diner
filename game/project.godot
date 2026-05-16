@@ -22,6 +22,11 @@ buses/default_bus_layout="uid://bxqib50yhjdqp"
 
 DialogueManager="*uid://drky6kndnd2ar"
 GlobalSignals="*uid://cwtl82eg2cl5k"
+DiscordRPCLoader="*uid://dqknbfqjnhc7k"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
 
 [gui]
 
