@@ -1,4 +1,4 @@
-.godot
+# Godot 4
+.godot/
 *.import
-/*.png
-/*.jpg
+*.uid

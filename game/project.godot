@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Diner"
-run/main_scene="res://game.tscn"
+run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.6")
 
 [audio]
@@ -22,11 +22,11 @@ buses/default_bus_layout="uid://bxqib50yhjdqp"
 
 DialogueManager="*uid://drky6kndnd2ar"
 GlobalSignals="*uid://cwtl82eg2cl5k"
-DiscordRPCLoader="*uid://dqknbfqjnhc7k"
+PlayerTracker="*uid://bkyiidiaeqdas"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
+enabled=PackedStringArray()
 
 [gui]
 

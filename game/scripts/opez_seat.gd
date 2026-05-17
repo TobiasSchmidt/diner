@@ -34,7 +34,7 @@ func is_camera_looking_at(target: Node3D) -> bool:
 	return dot > 0.6
 
 func spawn_character():
-	print("Spawning character")
+	print("Spawning Opez")
 	var character = character_scene.instantiate()
 	
 	character.global_transform = seat_anchor.global_transform

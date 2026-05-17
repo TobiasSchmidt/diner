@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://yrvgeuylpqb7"]
 
-[ext_resource type="AudioStream" uid="uid://pnpmu1fnfo1y" path="res://assets/sounds/dragon-studio-relaxing-rain-444802.mp3" id="1_feb5d"]
-[ext_resource type="PackedScene" uid="uid://crro5othpffit" path="res://scenes/diner_wrapper.tscn" id="2_fc0e3"]
-[ext_resource type="Script" uid="uid://c0eyh37vu8v4n" path="res://player.gd" id="4_7jktm"]
-[ext_resource type="AudioStream" uid="uid://bsks08d4fxa67" path="res://assets/sounds/dragon-studio-dry-thunder-364468.mp3" id="4_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://cep56lypglsjd" path="res://scenes/opez.tscn" id="4_ryrav"]
-[ext_resource type="Script" uid="uid://xqrfict1elu4" path="res://camera_controller.gd" id="6_eow3j"]
-[ext_resource type="Script" path="res://diner_seat_02.gd" id="6_ryrav"]
-[ext_resource type="Script" uid="uid://drky6kndnd2ar" path="res://dialogue_manager.gd" id="8_j5wjh"]
-[ext_resource type="Script" uid="uid://cwtl82eg2cl5k" path="res://global_signals.gd" id="9_vef74"]
+[ext_resource type="AudioStream" uid="uid://pnpmu1fnfo1y" path="res://assets/sounds/dragon-studio-relaxing-rain-444802.mp3" id="1_vtaks"]
+[ext_resource type="PackedScene" uid="uid://crro5othpffit" path="res://scenes/diner_wrapper.tscn" id="2_kvpfn"]
+[ext_resource type="Script" uid="uid://belw081d85kn2" path="res://scripts/opez_seat.gd" id="3_dinhu"]
+[ext_resource type="PackedScene" uid="uid://cep56lypglsjd" path="res://scenes/opez.tscn" id="4_kvuet"]
+[ext_resource type="Script" uid="uid://c4r8keff1o6ee" path="res://scripts/shadow_seat.gd" id="5_trtic"]
+[ext_resource type="Script" uid="uid://c0eyh37vu8v4n" path="res://scripts/player.gd" id="6_ir15t"]
+[ext_resource type="Script" uid="uid://xqrfict1elu4" path="res://scripts/camera_controller.gd" id="7_ca42v"]
+[ext_resource type="AudioStream" uid="uid://bsks08d4fxa67" path="res://assets/sounds/dragon-studio-dry-thunder-364468.mp3" id="8_rysoc"]
+[ext_resource type="Script" uid="uid://drky6kndnd2ar" path="res://scripts/autoload/dialogue_manager.gd" id="9_ssvqc"]
+[ext_resource type="Script" uid="uid://cwtl82eg2cl5k" path="res://scripts/autoload/global_signals.gd" id="10_264po"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vef74"]
+size = Vector3(0.33683777, 1.0411377, 2.3287354)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ryrav"]
 data = PackedVector3Array(0.6414, 1.0353, 1.1873, -0.6414, 1.1237999, 1.1873, 0.6414, 1.1237999, 1.1873, 0.6414, 1.0353, 1.1873, -0.6414, 1.0353, 1.1873, -0.6414, 1.1237999, 1.1873, 0.7423, 1.0353, -1.0809, 0.7423, 1.1237999, 1.0807999, 0.7423, 1.1237999, -1.0809, 0.7423, 1.0353, -1.0809, 0.7423, 1.0353, 1.0807999, 0.7423, 1.1237999, 1.0807999, -0.7423, 1.0353, 1.0807999, -0.7423, 1.1237999, -1.0809, -0.7423, 1.1237999, 1.0807999, -0.7423, 1.0353, 1.0807999, -0.7423, 1.0353, -1.0809, -0.7423, 1.1237999, -1.0809, -0.6414, 1.0353, -1.1873, 0.6414, 1.1237999, -1.1873, -0.6414, 1.1237999, -1.1873, -0.6414, 1.0353, -1.1873, 0.6414, 1.0353, -1.1873, 0.6414, 1.1237999, -1.1873, -0.6414, 1.0353, 1.1873, -0.7423, 1.1237999, 1.0807999, -0.6414, 1.1237999, 1.1873, -0.6414, 1.0353, 1.1873, -0.7423, 1.0353, 1.0807999, -0.7423, 1.1237999, 1.0807999, -0.6414, 1.1237999, -1.1873, -0.7423, 1.0353, -1.0809, -0.6414, 1.0353, -1.1873, -0.6414, 1.1237999, -1.1873, -0.7423, 1.1237999, -1.0809, -0.7423, 1.0353, -1.0809, 0.7423, 1.1237999, -1.0809, 0.6414, 1.0353, -1.1873, 0.7423, 1.0353, -1.0809, 0.7423, 1.1237999, -1.0809, 0.6414, 1.1237999, -1.1873, 0.6414, 1.0353, -1.1873, 0.6414, 1.1237999, 1.1873, 0.7423, 1.0353, 1.0807999, 0.6414, 1.0353, 1.1873, 0.6414, 1.1237999, 1.1873, 0.7423, 1.1237999, 1.0807999, 0.7423, 1.0353, 1.0807999, 0.7423, 1.1237999, 1.0807999, 0.6414, 1.1237999, -1.1873, 0.7423, 1.1237999, -1.0809, 0.7423, 1.1237999, 1.0807999, -0.7423, 1.1237999, -1.0809, 0.6414, 1.1237999, -1.1873, 0.6414, 1.1237999, -1.1873, -0.7423, 1.1237999, -1.0809, -0.6414, 1.1237999, -1.1873, -0.7423, 1.1237999, -1.0809, 0.7423, 1.1237999, 1.0807999, -0.6414, 1.1237999, 1.1873, -0.6414, 1.1237999, 1.1873, 0.7423, 1.1237999, 1.0807999, 0.6414, 1.1237999, 1.1873, -0.7423, 1.1237999, -1.0809, -0.6414, 1.1237999, 1.1873, -0.7423, 1.1237999, 1.0807999, -0.7423, 1.0353, 1.0807999, -0.6414, 1.0353, -1.1873, -0.7423, 1.0353, -1.0809, -0.7423, 1.0353, 1.0807999, 0.7423, 1.0353, -1.0809, -0.6414, 1.0353, -1.1873, -0.6414, 1.0353, -1.1873, 0.7423, 1.0353, -1.0809, 0.6414, 1.0353, -1.1873, 0.7423, 1.0353, -1.0809, -0.7423, 1.0353, 1.0807999, 0.6414, 1.0353, 1.1873, 0.6414, 1.0353, 1.1873, -0.7423, 1.0353, 1.0807999, -0.6414, 1.0353, 1.1873, 0.7423, 1.0353, -1.0809, 0.6414, 1.0353, 1.1873, 0.7423, 1.0353, 1.0807999, 0, -0.044099998, -0.4353, 0.377, 0.0279, -0.21769999, 0, 0.0279, -0.4353, 0, -0.044099998, -0.4353, 0.377, -0.044099998, -0.21769999, 0.377, 0.0279, -0.21769999, 0.377, -0.044099998, -0.21769999, 0.377, 0.0279, 0.21759999, 0.377, 0.0279, -0.21769999, 0.377, -0.044099998, -0.21769999, 0.377, -0.044099998, 0.21759999, 0.377, 0.0279, 0.21759999, 0.377, -0.044099998, 0.21759999, 0, 0.0279, 0.4353, 0.377, 0.0279, 0.21759999, 0.377, -0.044099998, 0.21759999, 0, -0.044099998, 0.4353, 0, 0.0279, 0.4353, 0, -0.044099998, 0.4353, -0.377, 0.0279, 0.21759999, 0, 0.0279, 0.4353, 0, -0.044099998, 0.4353, -0.377, -0.044099998, 0.21759999, -0.377, 0.0279, 0.21759999, 0.377, 0.0279, 0.21759999, 0, 0.0279, -0.4353, 0.377, 0.0279, -0.21769999, 0, 0.0279, -0.4353, 0.377, 0.0279, 0.21759999, -0.377, 0.0279, 0.21759999, -0.377, 0.0279, 0.21759999, 0.377, 0.0279, 0.21759999, 0, 0.0279, 0.4353, 0, 0.0279, -0.4353, -0.377, 0.0279, 0.21759999, -0.377, 0.0279, -0.21769999, -0.377, -0.044099998, 0.21759999, -0.377, 0.0279, -0.21769999, -0.377, 0.0279, 0.21759999, -0.377, -0.044099998, 0.21759999, -0.377, -0.044099998, -0.21769999, -0.377, 0.0279, -0.21769999, -0.377, -0.044099998, -0.21769999, 0, 0.0279, -0.4353, -0.377, 0.0279, -0.21769999, -0.377, -0.044099998, -0.21769999, 0, -0.044099998, -0.4353, 0, 0.0279, -0.4353, 0, -0.0218, 0.0792, -0.0793, 1.0995, 0, 0, 1.0995, 0.0792, 0, -0.0218, 0.0792, -0.0793, -0.0218, 0, -0.0793, 1.0995, 0, -0.0793, -0.0218, 0, 0, 1.0995, -0.0792, -0.0793, 1.0995, 0, -0.0793, -0.0218, 0, 0, -0.0218, -0.0792, 0, 1.0995, -0.0792, 0, -0.0218, -0.0792, 0.0792, 1.0995, 0, 0, 1.0995, -0.0792, 0, -0.0218, -0.0792, 0.0792, -0.0218, 0, 0.0792, 1.0995, 0, 0.0792, -0.0218, 0, 0, 1.0995, 0.0792, 0.0792, 1.0995, 0, 0.0792, -0.0218, 0, 0, -0.0218, 0.0792, 0, 1.0995, 0.0792)
@@ -21,59 +25,90 @@ height = 2.3
 
 [node name="RainSound" type="AudioStreamPlayer3D" parent="." unique_id=26837733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.794945, 1.0673575, 10.058972)
-stream = ExtResource("1_feb5d")
+stream = ExtResource("1_vtaks")
 autoplay = true
 parameters/looping = true
 
 [node name="RainSound2" type="AudioStreamPlayer3D" parent="." unique_id=1727865620]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.399325, 0.7201848, 1.4716649)
-stream = ExtResource("1_feb5d")
+stream = ExtResource("1_vtaks")
 autoplay = true
 parameters/looping = true
 
 [node name="RainSound3" type="AudioStreamPlayer3D" parent="." unique_id=516354763]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.007806, 0.7201848, 14.714216)
-stream = ExtResource("1_feb5d")
+stream = ExtResource("1_vtaks")
 autoplay = true
 parameters/looping = true
 
-[node name="diner-wrapper" parent="." unique_id=1784288821 instance=ExtResource("2_fc0e3")]
+[node name="diner-wrapper" parent="." unique_id=1784288821 instance=ExtResource("2_kvpfn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11846399, 14.6783, 4.48141)
 
 [node name="Opez-seat" type="Node3D" parent="diner-wrapper/diner" parent_id_path=PackedInt32Array(1784288821, 1877013781) index="250" unique_id=1938960405]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, 0)
 
-[node name="diner_seat_02" type="Node3D" parent="diner-wrapper/diner/Seat_02" parent_id_path=PackedInt32Array(1784288821, 1877013781, 2041418976) index="0" unique_id=334860769]
+[node name="opez_seat" type="Node3D" parent="diner-wrapper/diner/Seat_02" parent_id_path=PackedInt32Array(1784288821, 1877013781, 2041418976) index="0" unique_id=334860769]
 transform = Transform3D(-1.7881392e-07, 7.5497894e-08, -0.9999999, -7.549789e-08, 0.9999999, 7.549791e-08, -0.9999999, -7.54979e-08, 1.7881392e-07, -12.740263, -0.4332091, -3.2103899)
-script = ExtResource("6_ryrav")
-character_scene = ExtResource("4_ryrav")
+script = ExtResource("3_dinhu")
+character_scene = ExtResource("4_kvuet")
 
-[node name="SpawnTimer" type="Timer" parent="diner-wrapper/diner/Seat_02/diner_seat_02" unique_id=506089321]
+[node name="SpawnTimer" type="Timer" parent="diner-wrapper/diner/Seat_02/opez_seat" unique_id=506089321]
 one_shot = true
 autostart = true
 
-[node name="SeatAnchor" type="Marker3D" parent="diner-wrapper/diner/Seat_02/diner_seat_02" unique_id=194392517]
+[node name="SeatAnchor" type="Marker3D" parent="diner-wrapper/diner/Seat_02/opez_seat" unique_id=194392517]
 transform = Transform3D(1, 0, 0, 0, 1, 1.1117307e-21, 0, 1.1117307e-21, 1, -2.110634, 0.933857, -12.509613)
 
-[node name="Area3D" type="Area3D" parent="diner-wrapper/diner/Seat_02/diner_seat_02" unique_id=858913722]
+[node name="Area3D" type="Area3D" parent="diner-wrapper/diner/Seat_02/opez_seat" unique_id=858913722]
 transform = Transform3D(500, 0, 0, 0, 500, -3.2526065e-19, 0, 4.0657581e-19, 500, -2.0074065, 1.1139433, -13.225149)
+
+[node name="Seat_04" parent="diner-wrapper/diner" parent_id_path=PackedInt32Array(1784288821, 1877013781) index="254" unique_id=156779736]
+transform = Transform3D(1, -1.509958e-07, 0, 1.509958e-07, 1, 0, 0, 0, -1, 9.234942, 0.67303175, 6.045477)
+
+[node name="shadow_seat" type="Node3D" parent="diner-wrapper/diner/Seat_05" parent_id_path=PackedInt32Array(1784288821, 1877013781, 69747504) index="0" unique_id=2016737169]
+transform = Transform3D(-0.056936685, 1.59593e-07, 0.99837786, 1.59593e-07, 1, -1.5075088e-07, -0.99837786, 1.5075088e-07, -0.056936685, 0.52637863, -0.48030528, 0.6194341)
+script = ExtResource("5_trtic")
+character_scene = ExtResource("4_kvuet")
+
+[node name="SeatAnchor" type="Marker3D" parent="diner-wrapper/diner/Seat_05/shadow_seat" unique_id=1445250332]
+transform = Transform3D(1, 0, 0, 0, 1, 1.1117307e-21, 0, 1.1117307e-21, 1, 1.2711592, 0.95508164, -0.05742669)
 
 [node name="SpotLight4" parent="diner-wrapper/diner" parent_id_path=PackedInt32Array(1784288821, 1877013781) index="315" unique_id=1522048782]
 transform = Transform3D(1, 0, 0, 0, -0.0876773, 0.996149, 0, -0.996149, -0.0876773, -9.26489, 2.68881, -3.5870886)
 shadow_enabled = true
 spot_angle = 60.0
 
-[node name="CollisionShape3D18" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="0" unique_id=1704932119]
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="0" unique_id=86313295]
+transform = Transform3D(1.753515, 0, 0, 0, 1.8479719, 0, 0, 0, 1, 9.215594, -0.028699707, 6.0558624)
+shape = SubResource("BoxShape3D_vef74")
+
+[node name="CollisionShape3D23" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="1" unique_id=129437815]
+transform = Transform3D(1.753515, 0, 0, 0, 1.8479719, 0, 0, 0, 1, 9.215594, -0.028699707, -2.0207968)
+shape = SubResource("BoxShape3D_vef74")
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="2" unique_id=876794172]
+transform = Transform3D(1.753515, 0, 0, 0, 1.8479719, 0, 0, 0, 1, 4.2259865, -0.028699707, 6.0558624)
+shape = SubResource("BoxShape3D_vef74")
+
+[node name="CollisionShape3D21" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="3" unique_id=1003972653]
+transform = Transform3D(1.753515, 0, 0, 0, 1.8479719, 0, 0, 0, 1, -3.3860424, -0.028699707, 2.5593982)
+shape = SubResource("BoxShape3D_vef74")
+
+[node name="CollisionShape3D22" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="4" unique_id=71612754]
+transform = Transform3D(1.753515, 0, 0, 0, 1.8479719, 0, 0, 0, 1, -8.375394, -0.028699707, 2.5593982)
+shape = SubResource("BoxShape3D_vef74")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="5" unique_id=1704932119]
 transform = Transform3D(1.7881393e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.7881393e-07, -9.241949, -0.06671032, -3.5957658)
 shape = SubResource("ConcavePolygonShape3D_ryrav")
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=710063400 groups=["player"]]
-transform = Transform3D(-0.699788, 0, 0.714351, 0, 1, 0, -0.714351, 0, -0.699788, 2.2705784, 0.9433192, -1.2565694)
-script = ExtResource("4_7jktm")
+transform = Transform3D(-0.699788, 0, 0.714351, 0, 1, 0, -0.714351, 0, -0.699788, 7.3073325, 0.9433192, 10.288326)
+script = ExtResource("6_ir15t")
 
 [node name="CameraController" type="Node3D" parent="Player" unique_id=471975764]
 transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 0, 1.214007, 0)
-script = ExtResource("6_eow3j")
+script = ExtResource("7_ca42v")
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=1740265956]
 transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 0, 1.214007, 0)
@@ -92,15 +127,15 @@ shape = SubResource("5")
 
 [node name="thunder" type="AudioStreamPlayer3D" parent="." unique_id=1881941596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5889273, 0.3269734, 13.268986)
-stream = ExtResource("4_fc0e3")
+stream = ExtResource("8_rysoc")
 autoplay = true
 parameters/looping = true
 
 [node name="DialogueManager" type="Node3D" parent="." unique_id=1415910914]
-script = ExtResource("8_j5wjh")
+script = ExtResource("9_ssvqc")
 
 [node name="GlobalSignals" type="Node3D" parent="." unique_id=1366590255]
-script = ExtResource("9_vef74")
+script = ExtResource("10_264po")
 
 [editable path="diner-wrapper"]
 [editable path="diner-wrapper/diner"]

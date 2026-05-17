@@ -8,7 +8,7 @@
 	]
   ],
   "waiting_for_coffee": [
-		[
+	[
 	  "You remind me of my son.",
 	  "I haven't talked to him in a while.",
       "I miss him."
@@ -17,5 +17,12 @@
       "You better get to fetch my coffee. There might be other customers waiting."
 	]
   ],
-  "coffee_delivered": [["Thank you, that's just what i needed right now."]]
+  "coffee_delivered": [
+	["Thank you son."],
+	["A lot of folk are out and about tonight.", "You better be careful."],
+	[
+	  "I saw a young man go to the bathroom earlier.",
+      "He didn't look very healthy."
+	]
+  ]
 }
