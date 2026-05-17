@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cu8y1q0vq6xh5"]
 
 [ext_resource type="Script" uid="uid://cls0rk5se70hk" path="res://scenes/mug.gd" id="1_av5xm"]
-[ext_resource type="PackedScene" uid="uid://3wyckn34mx5s" path="res://low_poly_coffee_cup.glb" id="1_ksxj3"]
+[ext_resource type="PackedScene" uid="uid://3wyckn34mx5s" path="res://assets/models/low_poly_coffee_cup.glb" id="1_ksxj3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ksxj3"]
 emission_enabled = true
