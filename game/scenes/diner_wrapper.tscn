@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://crro5othpffit"]
 
-[ext_resource type="PackedScene" uid="uid://6wji5vhskfku" path="res://diner.glb" id="1_eh0tc"]
-[ext_resource type="Script" uid="uid://tgb5boigpbpo" path="res://coffee_machine.gd" id="2_v2bxy"]
+[ext_resource type="PackedScene" uid="uid://6wji5vhskfku" path="res://assets/models/diner.glb" id="1_eh0tc"]
+[ext_resource type="Script" uid="uid://tgb5boigpbpo" path="res://scripts/coffee_machine.gd" id="2_v2bxy"]
 [ext_resource type="AudioStream" uid="uid://djl4vgol57mey" path="res://assets/sounds/coffee-machine.mp3" id="3_s5i50"]
 [ext_resource type="PackedScene" uid="uid://cu8y1q0vq6xh5" path="res://scenes/mug.tscn" id="4_xlur2"]
 
