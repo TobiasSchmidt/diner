@@ -22,7 +22,7 @@ buses/default_bus_layout="uid://bxqib50yhjdqp"
 
 DialogueManager="*uid://drky6kndnd2ar"
 GlobalSignals="*uid://cwtl82eg2cl5k"
-DiscordRPCLoader="*uid://dqknbfqjnhc7k"
+PlayerTracker="*uid://c8dd27v5wxt6y"
 
 [editor_plugins]
 

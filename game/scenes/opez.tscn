@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cep56lypglsjd"]
 
 [ext_resource type="PackedScene" uid="uid://bhftiwsfwpdrj" path="res://assets/models/opez.glb" id="1_vdfwd"]
-[ext_resource type="Script" uid="uid://bhoncdj602gf4" path="res://scripts/opez.gd" id="2_drie2"]
+[ext_resource type="Script" uid="uid://bhoncdj602gf4" path="res://scripts/npcs/opez.gd" id="2_drie2"]
 [ext_resource type="PackedScene" uid="uid://dn2shu0d2ob40" path="res://scenes/DialogueComponent.tscn" id="2_sp4au"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_drie2"]

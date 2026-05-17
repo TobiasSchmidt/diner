@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bdq2vd54cj2im"]
 
-[ext_resource type="Script" uid="uid://3ov5tisxicle" path="res://scripts/dialogue.gd" id="1_v3dxv"]
+[ext_resource type="Script" uid="uid://3ov5tisxicle" path="res://scripts/dialogue/dialogue.gd" id="1_v3dxv"]
 [ext_resource type="FontFile" uid="uid://cka6p6yl5osk2" path="res://assets/fonts/VT323-Regular.ttf" id="2_myoxq"]
 [ext_resource type="AudioStream" uid="uid://cfqmw602mvj66" path="res://assets/sounds/blipSelect.wav" id="3_y6djt"]
 

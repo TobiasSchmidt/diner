@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cu8y1q0vq6xh5"]
 
-[ext_resource type="Script" uid="uid://cls0rk5se70hk" path="res://scripts/mug.gd" id="1_av5xm"]
+[ext_resource type="Script" uid="uid://cls0rk5se70hk" path="res://scripts/environment/mug.gd" id="1_av5xm"]
 [ext_resource type="PackedScene" uid="uid://3wyckn34mx5s" path="res://assets/models/low_poly_coffee_cup.glb" id="1_ksxj3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ksxj3"]
@@ -18,10 +18,10 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 [node name="Sketchfab_Scene" parent="Visual" unique_id=1897818465 instance=ExtResource("1_ksxj3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017651202, 0, 0.02053845)
 
-[node name="Cylinder_0" parent="Visual/Sketchfab_Scene/Sketchfab_model/Root/Cylinder" parent_id_path=PackedInt32Array(1897818465, 487561747) index="0" unique_id=309540976]
+[node name="Cylinder_0" parent="Visual/Sketchfab_Scene/Sketchfab_model/Root/Cylinder" parent_id_path=PackedInt32Array(1897818465, 1428980990) index="0" unique_id=1109251951]
 surface_material_override/0 = SubResource("StandardMaterial3D_ksxj3")
 
-[node name="Cylinder_1" parent="Visual/Sketchfab_Scene/Sketchfab_model/Root/Cylinder" parent_id_path=PackedInt32Array(1897818465, 487561747) index="1" unique_id=1833817693]
+[node name="Cylinder_1" parent="Visual/Sketchfab_Scene/Sketchfab_model/Root/Cylinder" parent_id_path=PackedInt32Array(1897818465, 1428980990) index="1" unique_id=880372954]
 visible = false
 
 [editable path="Visual/Sketchfab_Scene"]

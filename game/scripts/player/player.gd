@@ -14,6 +14,7 @@ var held_item = null
 @onready var camera_controller = $CameraController
 
 func _ready():
+	PlayerTracker.set_player(self)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
@@ -59,7 +60,6 @@ func _physics_process(delta):
 	
 func try_interact():
 	if ray.is_colliding():
-		print(ray.get_collider())
 		var hit = ray.get_collider()
 		if hit and hit.has_method("interact"):
 			hit.interact()
@@ -70,7 +70,7 @@ func hold_item(item):
 	
 	item.reparent(hand)
 	item.transform = Transform3D.IDENTITY
-	#item.scale = Vector3(1.5, 1.5, 1.5)
+	item.scale = Vector3(1.5, 1.5, 1.5)
 	
 func consume_item():
 	if held_item:

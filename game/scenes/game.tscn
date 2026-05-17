@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://yrvgeuylpqb7"]
 
-[ext_resource type="AudioStream" uid="uid://pnpmu1fnfo1y" path="res://assets/sounds/dragon-studio-relaxing-rain-444802.mp3" id="1_feb5d"]
-[ext_resource type="PackedScene" uid="uid://crro5othpffit" path="res://scenes/diner_wrapper.tscn" id="2_fc0e3"]
-[ext_resource type="Script" uid="uid://c0eyh37vu8v4n" path="res://scripts/player.gd" id="4_7jktm"]
-[ext_resource type="AudioStream" uid="uid://bsks08d4fxa67" path="res://assets/sounds/dragon-studio-dry-thunder-364468.mp3" id="4_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://cep56lypglsjd" path="res://scenes/opez.tscn" id="4_ryrav"]
-[ext_resource type="Script" uid="uid://xqrfict1elu4" path="res://scripts/camera_controller.gd" id="6_eow3j"]
-[ext_resource type="Script" uid="uid://belw081d85kn2" path="res://assets/images/diner_seat_02.gd" id="6_ryrav"]
-[ext_resource type="Script" uid="uid://drky6kndnd2ar" path="res://scripts/dialogue_manager.gd" id="8_j5wjh"]
-[ext_resource type="Script" uid="uid://cwtl82eg2cl5k" path="res://scripts/autostart/global_signals.gd" id="9_vef74"]
+[ext_resource type="AudioStream" uid="uid://pnpmu1fnfo1y" path="res://assets/sounds/dragon-studio-relaxing-rain-444802.mp3" id="1_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://crro5othpffit" path="res://scenes/diner_wrapper.tscn" id="2_vtaks"]
+[ext_resource type="Script" uid="uid://belw081d85kn2" path="res://scripts/environment/opez_seat.gd" id="3_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://cep56lypglsjd" path="res://scenes/opez.tscn" id="4_dinhu"]
+[ext_resource type="Script" uid="uid://c0eyh37vu8v4n" path="res://scripts/player/player.gd" id="5_kvuet"]
+[ext_resource type="Script" uid="uid://cbskr4njpxmt7" path="res://scripts/environment/shadow_seat.gd" id="5_vtaks"]
+[ext_resource type="Script" uid="uid://xqrfict1elu4" path="res://scripts/player/camera_controller.gd" id="6_trtic"]
+[ext_resource type="AudioStream" uid="uid://bsks08d4fxa67" path="res://assets/sounds/dragon-studio-dry-thunder-364468.mp3" id="7_ir15t"]
+[ext_resource type="Script" uid="uid://drky6kndnd2ar" path="res://scripts/dialogue/dialogue_manager.gd" id="8_ca42v"]
+[ext_resource type="Script" uid="uid://cwtl82eg2cl5k" path="res://scripts/autostart/global_signals.gd" id="9_rysoc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtaks"]
+size = Vector3(0.26971436, 1.4536133, 2.263916)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ryrav"]
 data = PackedVector3Array(0.6414, 1.0353, 1.1873, -0.6414, 1.1237999, 1.1873, 0.6414, 1.1237999, 1.1873, 0.6414, 1.0353, 1.1873, -0.6414, 1.0353, 1.1873, -0.6414, 1.1237999, 1.1873, 0.7423, 1.0353, -1.0809, 0.7423, 1.1237999, 1.0807999, 0.7423, 1.1237999, -1.0809, 0.7423, 1.0353, -1.0809, 0.7423, 1.0353, 1.0807999, 0.7423, 1.1237999, 1.0807999, -0.7423, 1.0353, 1.0807999, -0.7423, 1.1237999, -1.0809, -0.7423, 1.1237999, 1.0807999, -0.7423, 1.0353, 1.0807999, -0.7423, 1.0353, -1.0809, -0.7423, 1.1237999, -1.0809, -0.6414, 1.0353, -1.1873, 0.6414, 1.1237999, -1.1873, -0.6414, 1.1237999, -1.1873, -0.6414, 1.0353, -1.1873, 0.6414, 1.0353, -1.1873, 0.6414, 1.1237999, -1.1873, -0.6414, 1.0353, 1.1873, -0.7423, 1.1237999, 1.0807999, -0.6414, 1.1237999, 1.1873, -0.6414, 1.0353, 1.1873, -0.7423, 1.0353, 1.0807999, -0.7423, 1.1237999, 1.0807999, -0.6414, 1.1237999, -1.1873, -0.7423, 1.0353, -1.0809, -0.6414, 1.0353, -1.1873, -0.6414, 1.1237999, -1.1873, -0.7423, 1.1237999, -1.0809, -0.7423, 1.0353, -1.0809, 0.7423, 1.1237999, -1.0809, 0.6414, 1.0353, -1.1873, 0.7423, 1.0353, -1.0809, 0.7423, 1.1237999, -1.0809, 0.6414, 1.1237999, -1.1873, 0.6414, 1.0353, -1.1873, 0.6414, 1.1237999, 1.1873, 0.7423, 1.0353, 1.0807999, 0.6414, 1.0353, 1.1873, 0.6414, 1.1237999, 1.1873, 0.7423, 1.1237999, 1.0807999, 0.7423, 1.0353, 1.0807999, 0.7423, 1.1237999, 1.0807999, 0.6414, 1.1237999, -1.1873, 0.7423, 1.1237999, -1.0809, 0.7423, 1.1237999, 1.0807999, -0.7423, 1.1237999, -1.0809, 0.6414, 1.1237999, -1.1873, 0.6414, 1.1237999, -1.1873, -0.7423, 1.1237999, -1.0809, -0.6414, 1.1237999, -1.1873, -0.7423, 1.1237999, -1.0809, 0.7423, 1.1237999, 1.0807999, -0.6414, 1.1237999, 1.1873, -0.6414, 1.1237999, 1.1873, 0.7423, 1.1237999, 1.0807999, 0.6414, 1.1237999, 1.1873, -0.7423, 1.1237999, -1.0809, -0.6414, 1.1237999, 1.1873, -0.7423, 1.1237999, 1.0807999, -0.7423, 1.0353, 1.0807999, -0.6414, 1.0353, -1.1873, -0.7423, 1.0353, -1.0809, -0.7423, 1.0353, 1.0807999, 0.7423, 1.0353, -1.0809, -0.6414, 1.0353, -1.1873, -0.6414, 1.0353, -1.1873, 0.7423, 1.0353, -1.0809, 0.6414, 1.0353, -1.1873, 0.7423, 1.0353, -1.0809, -0.7423, 1.0353, 1.0807999, 0.6414, 1.0353, 1.1873, 0.6414, 1.0353, 1.1873, -0.7423, 1.0353, 1.0807999, -0.6414, 1.0353, 1.1873, 0.7423, 1.0353, -1.0809, 0.6414, 1.0353, 1.1873, 0.7423, 1.0353, 1.0807999, 0, -0.044099998, -0.4353, 0.377, 0.0279, -0.21769999, 0, 0.0279, -0.4353, 0, -0.044099998, -0.4353, 0.377, -0.044099998, -0.21769999, 0.377, 0.0279, -0.21769999, 0.377, -0.044099998, -0.21769999, 0.377, 0.0279, 0.21759999, 0.377, 0.0279, -0.21769999, 0.377, -0.044099998, -0.21769999, 0.377, -0.044099998, 0.21759999, 0.377, 0.0279, 0.21759999, 0.377, -0.044099998, 0.21759999, 0, 0.0279, 0.4353, 0.377, 0.0279, 0.21759999, 0.377, -0.044099998, 0.21759999, 0, -0.044099998, 0.4353, 0, 0.0279, 0.4353, 0, -0.044099998, 0.4353, -0.377, 0.0279, 0.21759999, 0, 0.0279, 0.4353, 0, -0.044099998, 0.4353, -0.377, -0.044099998, 0.21759999, -0.377, 0.0279, 0.21759999, 0.377, 0.0279, 0.21759999, 0, 0.0279, -0.4353, 0.377, 0.0279, -0.21769999, 0, 0.0279, -0.4353, 0.377, 0.0279, 0.21759999, -0.377, 0.0279, 0.21759999, -0.377, 0.0279, 0.21759999, 0.377, 0.0279, 0.21759999, 0, 0.0279, 0.4353, 0, 0.0279, -0.4353, -0.377, 0.0279, 0.21759999, -0.377, 0.0279, -0.21769999, -0.377, -0.044099998, 0.21759999, -0.377, 0.0279, -0.21769999, -0.377, 0.0279, 0.21759999, -0.377, -0.044099998, 0.21759999, -0.377, -0.044099998, -0.21769999, -0.377, 0.0279, -0.21769999, -0.377, -0.044099998, -0.21769999, 0, 0.0279, -0.4353, -0.377, 0.0279, -0.21769999, -0.377, -0.044099998, -0.21769999, 0, -0.044099998, -0.4353, 0, 0.0279, -0.4353, 0, -0.0218, 0.0792, -0.0793, 1.0995, 0, 0, 1.0995, 0.0792, 0, -0.0218, 0.0792, -0.0793, -0.0218, 0, -0.0793, 1.0995, 0, -0.0793, -0.0218, 0, 0, 1.0995, -0.0792, -0.0793, 1.0995, 0, -0.0793, -0.0218, 0, 0, -0.0218, -0.0792, 0, 1.0995, -0.0792, 0, -0.0218, -0.0792, 0.0792, 1.0995, 0, 0, 1.0995, -0.0792, 0, -0.0218, -0.0792, 0.0792, -0.0218, 0, 0.0792, 1.0995, 0, 0.0792, -0.0218, 0, 0, 1.0995, 0.0792, 0.0792, 1.0995, 0, 0.0792, -0.0218, 0, 0, -0.0218, 0.0792, 0, 1.0995, 0.0792)
@@ -21,59 +25,87 @@ height = 2.3
 
 [node name="RainSound" type="AudioStreamPlayer3D" parent="." unique_id=26837733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.794945, 1.0673575, 10.058972)
-stream = ExtResource("1_feb5d")
+stream = ExtResource("1_0tnpc")
 autoplay = true
 parameters/looping = true
 
 [node name="RainSound2" type="AudioStreamPlayer3D" parent="." unique_id=1727865620]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.399325, 0.7201848, 1.4716649)
-stream = ExtResource("1_feb5d")
+stream = ExtResource("1_0tnpc")
 autoplay = true
 parameters/looping = true
 
 [node name="RainSound3" type="AudioStreamPlayer3D" parent="." unique_id=516354763]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.007806, 0.7201848, 14.714216)
-stream = ExtResource("1_feb5d")
+stream = ExtResource("1_0tnpc")
 autoplay = true
 parameters/looping = true
 
-[node name="diner-wrapper" parent="." unique_id=1784288821 instance=ExtResource("2_fc0e3")]
+[node name="diner-wrapper" parent="." unique_id=1784288821 instance=ExtResource("2_vtaks")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11846399, 14.6783, 4.48141)
 
 [node name="Opez-seat" type="Node3D" parent="diner-wrapper/diner" parent_id_path=PackedInt32Array(1784288821, 1877013781) index="250" unique_id=1938960405]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, 0)
 
-[node name="diner_seat_02" type="Node3D" parent="diner-wrapper/diner/Seat_02" parent_id_path=PackedInt32Array(1784288821, 1877013781, 1084289422) index="0" unique_id=334860769]
+[node name="opez_seat" type="Node3D" parent="diner-wrapper/diner/Seat_02" parent_id_path=PackedInt32Array(1784288821, 1877013781, 1084289422) index="0" unique_id=334860769]
 transform = Transform3D(-1.7881392e-07, 7.5497894e-08, -0.9999999, -7.549789e-08, 0.9999999, 7.549791e-08, -0.9999999, -7.54979e-08, 1.7881392e-07, -12.740263, -0.4332091, -3.2103899)
-script = ExtResource("6_ryrav")
-character_scene = ExtResource("4_ryrav")
+script = ExtResource("3_kvpfn")
+character_scene = ExtResource("4_dinhu")
 
-[node name="SpawnTimer" type="Timer" parent="diner-wrapper/diner/Seat_02/diner_seat_02" unique_id=506089321]
+[node name="SpawnTimer" type="Timer" parent="diner-wrapper/diner/Seat_02/opez_seat" unique_id=506089321]
 one_shot = true
 autostart = true
 
-[node name="SeatAnchor" type="Marker3D" parent="diner-wrapper/diner/Seat_02/diner_seat_02" unique_id=194392517]
+[node name="SeatAnchor" type="Marker3D" parent="diner-wrapper/diner/Seat_02/opez_seat" unique_id=194392517]
 transform = Transform3D(1, 0, 0, 0, 1, 1.1117307e-21, 0, 1.1117307e-21, 1, -2.110634, 0.933857, -12.509613)
 
-[node name="Area3D" type="Area3D" parent="diner-wrapper/diner/Seat_02/diner_seat_02" unique_id=858913722]
+[node name="Area3D" type="Area3D" parent="diner-wrapper/diner/Seat_02/opez_seat" unique_id=858913722]
 transform = Transform3D(500, 0, 0, 0, 500, -3.2526065e-19, 0, 4.0657581e-19, 500, -2.0074065, 1.1139433, -13.225149)
+
+[node name="shadow_seat" type="Node3D" parent="diner-wrapper/diner/Seat_05" parent_id_path=PackedInt32Array(1784288821, 1877013781, 1270949359) index="0" unique_id=2082006206]
+transform = Transform3D(0.07398664, 1.3982411e-07, -0.99725926, 1.3982412e-07, 1, 1.5058195e-07, 0.99725926, -1.5058194e-07, 0.07398664, 1.1184092, 1.3402767, -1.5600035)
+script = ExtResource("5_vtaks")
+character_scene = ExtResource("4_dinhu")
+
+[node name="SeatAnchor" type="Marker3D" parent="diner-wrapper/diner/Seat_05/shadow_seat" unique_id=1199678225]
+transform = Transform3D(0.9999999, 1.5099579e-07, 1.0732459e-22, -1.5099579e-07, 0.9999999, 7.1077865e-16, 0, -7.107778e-16, -0.9999999, 2.0119991, -0.64234984, 1.2964106)
 
 [node name="SpotLight4" parent="diner-wrapper/diner" parent_id_path=PackedInt32Array(1784288821, 1877013781) index="315" unique_id=1522048782]
 transform = Transform3D(1, 0, 0, 0, -0.0876773, 0.996149, 0, -0.996149, -0.0876773, -9.26489, 2.68881, -3.5870886)
 shadow_enabled = true
 spot_angle = 60.0
 
-[node name="CollisionShape3D18" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="0" unique_id=1704932119]
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="0" unique_id=1345775796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.229271, 0.18695176, 6.0180817)
+shape = SubResource("BoxShape3D_vtaks")
+
+[node name="CollisionShape3D21" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="1" unique_id=142865943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.236853, 0.18695176, -2.0849283)
+shape = SubResource("BoxShape3D_vtaks")
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="2" unique_id=46743628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.033349, 0.18695176, 6.0180817)
+shape = SubResource("BoxShape3D_vtaks")
+
+[node name="CollisionShape3D22" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="3" unique_id=673263889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.353679, 0.18695176, 2.5239573)
+shape = SubResource("BoxShape3D_vtaks")
+
+[node name="CollisionShape3D23" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="4" unique_id=1660587164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.360713, 0.18695176, 2.5239573)
+shape = SubResource("BoxShape3D_vtaks")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="diner-wrapper/diner/CollisionBoxes" parent_id_path=PackedInt32Array(1784288821, 1928966310) index="5" unique_id=1704932119]
 transform = Transform3D(1.7881393e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.7881393e-07, -9.241949, -0.06671032, -3.5957658)
 shape = SubResource("ConcavePolygonShape3D_ryrav")
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=710063400 groups=["player"]]
-transform = Transform3D(-0.699788, 0, 0.714351, 0, 1, 0, -0.714351, 0, -0.699788, 2.2705784, 0.9433192, -1.2565694)
-script = ExtResource("4_7jktm")
+transform = Transform3D(-0.699788, 0, 0.714351, 0, 1, 0, -0.714351, 0, -0.699788, 7.1783776, 0.77290547, 10.186734)
+script = ExtResource("5_kvuet")
 
 [node name="CameraController" type="Node3D" parent="Player" unique_id=471975764]
 transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 0, 1.214007, 0)
-script = ExtResource("6_eow3j")
+script = ExtResource("6_trtic")
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=1740265956]
 transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 0, 1.214007, 0)
@@ -92,15 +124,15 @@ shape = SubResource("5")
 
 [node name="thunder" type="AudioStreamPlayer3D" parent="." unique_id=1881941596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5889273, 0.3269734, 13.268986)
-stream = ExtResource("4_fc0e3")
+stream = ExtResource("7_ir15t")
 autoplay = true
 parameters/looping = true
 
 [node name="DialogueManager" type="Node3D" parent="." unique_id=1415910914]
-script = ExtResource("8_j5wjh")
+script = ExtResource("8_ca42v")
 
 [node name="GlobalSignals" type="Node3D" parent="." unique_id=1366590255]
-script = ExtResource("9_vef74")
+script = ExtResource("9_rysoc")
 
 [editable path="diner-wrapper"]
 [editable path="diner-wrapper/diner"]
