@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://b2awnq05wanur"]
 
 [ext_resource type="PackedScene" uid="uid://crro5othpffit" path="res://scenes/diner_wrapper.tscn" id="1_rk22q"]
+[ext_resource type="Script" uid="uid://b06xaxmpnlfkn" path="res://scripts/menu_root.gd" id="2_u4kki"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4kki"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf3n6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xg1py"]
 
 [node name="Node3D" type="Node3D" unique_id=2146914118]
 
@@ -9,3 +16,52 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4147243, -10.035906, 11.24
 
 [node name="diner-wrapper" parent="." unique_id=1784288821 instance=ExtResource("1_rk22q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2215082, 0, 0.40837955)
+
+[node name="MainMenuUI" type="CanvasLayer" parent="." unique_id=826049719]
+
+[node name="MenuRoot" type="Control" parent="MainMenuUI" unique_id=1158127499]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_u4kki")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenuUI/MenuRoot" unique_id=1753277471]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_right = 80.0
+grow_vertical = 2
+theme_override_constants/margin_left = 160
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MainMenuUI/MenuRoot/MarginContainer" unique_id=1350199642]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MainMenuUI/MenuRoot/MarginContainer/ButtonContainer" unique_id=1441365225]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u4kki")
+text = "Play"
+
+[node name="Settings" type="Button" parent="MainMenuUI/MenuRoot/MarginContainer/ButtonContainer" unique_id=707698881]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hf3n6")
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MainMenuUI/MenuRoot/MarginContainer/ButtonContainer" unique_id=1888239845]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xg1py")
+text = "Quit"
+
+[node name="TextureRect" type="TextureRect" parent="MainMenuUI/MenuRoot" unique_id=1015273623]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="MainMenuUI/MenuRoot/MarginContainer/ButtonContainer/Play" to="MainMenuUI/MenuRoot" method="_on_play_pressed"]
+[connection signal="pressed" from="MainMenuUI/MenuRoot/MarginContainer/ButtonContainer/Settings" to="MainMenuUI/MenuRoot" method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenuUI/MenuRoot/MarginContainer/ButtonContainer/Quit" to="MainMenuUI/MenuRoot" method="_on_quit_pressed"]
